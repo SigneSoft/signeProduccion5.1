@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "listaformulario",
+        "designer|userClassName": "undefinedViewController"
+    },
+    "name": "undefinedViewController",
+    "designerId": "96fd7802-3fd9-4ecf-a529-155fdc574f19"
+}

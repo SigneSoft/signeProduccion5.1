@@ -1,0 +1,254 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "listasistemamedida",
+        "designer|userClassName": "listaSistemaMedida",
+        "height": 322,
+        "id": "listaSistemaMedida",
+        "itemId": null,
+        "store": "storeSistemaMedida",
+        "title": "Lista de sistemas de medida"
+    },
+    "name": "listaRegistro",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "69958e9f-a394-44a3-9acd-ce59031e2336",
+    "viewControllerInstanceId": "96fd7802-3fd9-4ecf-a529-155fdc574f19",
+    "viewModelInstanceId": "32d7bdee-c758-4291-8d5c-a015c6412813",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyGridView2",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "95d2e408-e314-48da-8332-884ddce1d132"
+        },
+        {
+            "type": "Ext.grid.column.RowNumberer",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyRowNumberer",
+            "designerId": "9f62d075-115e-443b-b6fd-3af67c471d56"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "id",
+                "hidden": true,
+                "text": "Id"
+            },
+            "name": "MyColumn10",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "077dd0f5-177b-4659-a28f-abaed9f452f2"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "descripcion",
+                "flex": 0.3,
+                "text": "Descripción"
+            },
+            "name": "MyColumn11",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "8e0e008d-a2ff-4eec-8824-b96d462c2975",
+            "cn": [
+                {
+                    "type": "Ext.grid.filters.filter.String",
+                    "reference": {
+                        "name": "filter",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyStringFilter",
+                    "designerId": "3fd776ba-6969-4a5e-82de-e49f6be61527"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "itemId": "tbBarraHerramienta"
+            },
+            "name": "MyToolbar2",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "e0238440-1d4d-440d-89e3-d74a0cb2a36b",
+            "cn": [
+                {
+                    "type": "Ext.container.ButtonGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "columns": 3,
+                        "layout|flex": null,
+                        "title": "Edición"
+                    },
+                    "name": "MyButtonGroup2",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "1d61383b-8e6d-423d-b80a-81f39800f973",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "icon-add",
+                                "id": null,
+                                "itemId": "btnAniadirSistemaMedida",
+                                "text": "Añadir"
+                            },
+                            "name": "MyButton6",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "7cff58cb-e61d-4862-bf3a-5a5bc81d336f"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "icon-edit",
+                                "itemId": "btnEditarSistemaMedida",
+                                "text": "Editar"
+                            },
+                            "name": "MyButton7",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "89cc1867-9bed-4fd0-b924-9922f21256fb"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "icon-delete",
+                                "itemId": "btnEliminarSistemaMedida",
+                                "text": "Eliminar"
+                            },
+                            "name": "MyButton8",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "7b98cadb-bc2b-4ee2-b1dc-e4aa705eca22"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.selection.CheckboxModel",
+            "reference": {
+                "name": "selModel",
+                "type": "object"
+            },
+            "codeClass": "Ext.selection.CheckboxModel",
+            "userConfig": {
+                "mode": "SINGLE",
+                "showHeaderCheckbox": false
+            },
+            "name": "MyCheckboxSelectionModel1",
+            "designerId": "8a4ba47a-0ef4-4674-83f0-3c1d1a5ee1ff"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "itemId": "mypagingtoolbar1",
+                "store": "storeSistemaMedida",
+                "width": 360
+            },
+            "name": "MyPagingToolbar1",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "4abdfad0-8e6b-4362-a4a1-dfb405ab9d7c",
+            "cn": [
+                {
+                    "type": "basicfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "doRefresh",
+                        "implHandler": [
+                            "signeProduccion.app.getController('controladorSistemaMedida').cargarSistemaMedida();"
+                        ]
+                    },
+                    "name": "doRefresh",
+                    "designerId": "9f2eb2a1-1e72-497a-82af-a8aaec7f520f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.filters.Filters",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyGridFiltersPlugin",
+            "designerId": "6380dbe7-8be5-4175-b1ed-ad1de6c4b1d8"
+        }
+    ]
+}

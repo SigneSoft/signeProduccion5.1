@@ -1,0 +1,43 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "modelSistemaMedida",
+            "MyModel"
+        ],
+        "name": "signeProduccion",
+        "stores": [
+            "storeSistemaMedida"
+        ],
+        "views": [
+            "listaSistemaMedida",
+            "editarSistemaMedida"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "signeProduccion.app.getController('controladorSistemaMedida').cargarSistemaMedida();",
+                    ""
+                ]
+            },
+            "name": "launch",
+            "designerId": "9159dcdb-4e35-4dcc-97b6-0a7a12216474"
+        }
+    ]
+}

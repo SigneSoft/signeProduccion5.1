@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "editarformulario",
+        "designer|userClassName": "undefinedViewController1"
+    },
+    "name": "undefinedViewController1",
+    "designerId": "e5396a9c-d13a-4b87-8582-94724d0ab52b"
+}

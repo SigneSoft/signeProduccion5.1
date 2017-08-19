@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "editarformulario",
+        "designer|userClassName": "undefinedViewModel1"
+    },
+    "name": "undefinedViewModel1",
+    "designerId": "d0e90f14-2e91-4111-9c01-24fae24ce775"
+}

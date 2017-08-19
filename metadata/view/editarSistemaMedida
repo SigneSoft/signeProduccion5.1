@@ -1,0 +1,130 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "designer|userAlias": "editarsistemamedida",
+        "designer|userClassName": "editarSistemaMedida",
+        "height": 174,
+        "id": null,
+        "itemId": "editarFormulario",
+        "modal": true,
+        "title": "Sistemas de medida",
+        "width": 520
+    },
+    "name": "editarRegistro",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "a250ae87-82e7-450e-a584-06a8e12e2f13",
+    "viewControllerInstanceId": "e5396a9c-d13a-4b87-8582-94724d0ab52b",
+    "viewModelInstanceId": "d0e90f14-2e91-4111-9c01-24fae24ce775",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "height": 445,
+                "title": "",
+                "width": 515
+            },
+            "name": "MyForm",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "ed130a88-3978-4d67-a725-5042e6372726",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Formulario"
+                    },
+                    "name": "MyFieldSet",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "81342b4e-8397-4fcd-8e47-6e71aaeccaaa",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "allowOnlyWhitespace": false,
+                                "blankText": "Este campo es obligatorio.",
+                                "fieldLabel": "Descripción",
+                                "id": null,
+                                "layout|anchor": "100%",
+                                "name": "descripcion",
+                                "validateBlank": true
+                            },
+                            "name": "MyTextField",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "b91ef490-d2ee-45ab-921b-e2f1319c248c"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "name": "MyToolbar3",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "766e7021-3b90-4a60-b785-3406190b8634",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "",
+                                "iconCls": "icon-save",
+                                "id": "btnGuardarSistemaMedida",
+                                "itemId": null,
+                                "layout|flex": null,
+                                "scale": "medium",
+                                "text": "Guardar"
+                            },
+                            "name": "MyButton9",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "2bb7bbe7-770c-4245-8bf7-41a371fa8fb9"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

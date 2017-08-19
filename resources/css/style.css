@@ -1,0 +1,149 @@
+/*.x-body {
+	background: #f5f5f5 url(../images/logo_acredicom.png) no-repeat 50% 0;
+}*/
+
+
+.x-form-invalid-field {
+    background-color: white;
+    background-image: url(../images/exclamation.png);
+    background-repeat: no-repeat;
+    background-position: right;
+/*order-width:1px;
+	border-style:solid;
+	border-color:#cf4c35;*/
+}
+/*.x-panel-header {
+background: #e9e9e9 url(../images/panel_hd_corner.png) no-repeat 100% 0;
+}
+
+.x-panel-header-text-container {
+color: #3299cc;
+text-transform: none;
+}
+
+.x-column-header-sort-ASC .x-column-header-text {
+background-image: url(../images/sort_asc.png);
+}
+
+.x-column-header-sort-DESC .x-column-header-text {
+background-image: url(../images/sort_desc.png);
+}
+
+.x-grid-header-ct {
+border: solid silver;
+border-width: 1px 1px 0 1px !important;
+}
+
+.x-tip {
+background: #fafafa;
+border: 1px solid #e4e4e4;
+}
+
+.x-tip-body {
+color: #666;
+font-weight: bold;
+font-size: 15px;
+white-space: nowrap;
+}
+
+.contactInfo {
+background: #fafafa;
+border: 1px solid #e6e6e6;
+color: #666;
+line-height: 1.5em;
+}
+
+.contactInfo .name {
+font-weight: bold;
+}
+
+.orderTotals table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+.orderTotals th, .orderTotals td {
+padding: 5px 10px;
+text-align: right;
+border-top: 1px solid #e6e6e6;
+}
+.orderTotals th {
+color: #666;
+width: 100%;
+}
+.orderTotals .total td {
+background: #d6e8f6;
+border-top-color: #d6e8f6;
+font-weight: bold;
+}
+
+.breadcrumbs .prev {
+color: #3299cc;
+cursor: pointer;
+text-decoration: underline;
+}
+.breadcrumbs .current {
+font-weight: bold;
+color: #666;
+}*/
+
+
+/*x-panel-header-title-default*/
+
+.gridTitle .x-panel-header-title
+{font-size:18px; 
+	/*font-weight:bold;
+	background-color: yellow;*/
+	color: #3299cc;} 
+
+.panelBody .x-panel-body{font-size:15px; color:darkorange; font-weight:bold;}
+
+.icon-add {
+	background-image: url(../images/page_add.png);
+}
+.icon-edit {
+	background-image: url(../images/page_edit.png);
+}
+.icon-delete {
+	background-image: url(../images/page_delete.png);
+}
+.icon-cancel {
+	background-image: url(../images/cancel.png);
+}
+.icon-save {
+	background-image: url(../images/disk.png);
+}
+.icon-previous {
+	background-image: url(../images/resultset_previous.png);
+}
+.icon-next {
+	background-image: url(../images/resultset_next.png);
+}
+.icon-accept {
+	background-image: url(../images/accept.png);
+}
+.icon-cancel {
+	background-image: url(../images/cancel.png);
+}
+.icon-content {
+	background-image: url(../images/folder_edit.png);
+}
+.icon-build {
+	background-image: url(../images/cog_go.png);
+}
+.icon-print {
+	background-image: url(../images/printer.png);
+}
+.icon-refresh {
+	background-image: url(../images/arrow_refresh.png);
+}
+
+
+
+
+
+.globalMsg {
+	background: #8ebf2b;
+	color: #fff;
+	padding: 5px 10px;
+	font-weight: bold;
+}

@@ -1,0 +1,42 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelSistemaMedida",
+        "idProperty": null
+    },
+    "name": "modelRest",
+    "designerId": "67e74612-b0c1-4e46-9159-db1e9450df37",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField",
+            "designerId": "74c213c4-c49a-4f6c-b25d-90f7090cf31c"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "descripcion"
+            },
+            "name": "MyField1",
+            "designerId": "0a4876d0-7847-4095-9992-65a6ef714f08"
+        }
+    ]
+}

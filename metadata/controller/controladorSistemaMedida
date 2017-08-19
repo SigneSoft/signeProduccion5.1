@@ -1,0 +1,262 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "controladorSistemaMedida",
+        "stores": [
+            "storeSistemaMedida"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "15d9f1bd-6e2b-4a8e-8d52-acb2c8b58fc7",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnAniadirSistemaMedida",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnAniadirSistemaMedidaClick",
+                "implHandler": [
+                    "var view = Ext.widget('editarsistemamedida');"
+                ],
+                "name": "click"
+            },
+            "name": "onBtnAniadirSistemaMedidaClick",
+            "designerId": "1e1f0ab4-a5e5-4ef7-80a7-3fb38268fe1c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnEditarSistemaMedida",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnEditarSistemaMedidaClick",
+                "implHandler": [
+                    "this.editarSistemaMedida();"
+                ],
+                "name": "click"
+            },
+            "name": "onBtnEditarSistemaMedidaClick",
+            "designerId": "e068598d-0ac4-420e-b264-ceb58912e11b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnEliminarSistemaMedida",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnEliminarSistemaMedidaClick",
+                "implHandler": [
+                    "record = this.getListaSistemaMedida().getSelectionModel().getSelection();",
+                    "",
+                    "if(record.length > 0){",
+                    "\tstore = this.getStoreSistemaMedidaStore();",
+                    "",
+                    "\tstore.getProxy().setExtraParam(\"fn\", \"sp_put_sistema_um\");",
+                    "\t//store.getProxy().setExtraParam(\"idmod\",signeApp.app.idmodapp);",
+                    "\tvar lparametros = Ext.util.JSON.encode({\"empresa\":1});",
+                    "\tstore.getProxy().setExtraParam(\"listparams\", lparametros);",
+                    "",
+                    "",
+                    "\tExt.MessageBox.show({",
+                    "\t\ttitle : 'Eliminar Registro',",
+                    "\t\tbuttons : Ext.MessageBox.YESNO,",
+                    "\t\tmsg : 'Realmente desea eliminar el sistema : '+record[0].data.descripcion+' ?',",
+                    "\t\ticon : Ext.Msg.WARNING,",
+                    "\t\tfn : function(btn)",
+                    "\t\t{",
+                    "\t\t\tif (btn == 'yes')",
+                    "\t\t\t{",
+                    "\t\t\t\tstore.remove(record);",
+                    "",
+                    "\t\t\t}",
+                    "\t\t}",
+                    "\t});",
+                    "}else{",
+                    "\tExt.MessageBox.show({",
+                    "\t\ttitle: 'Mensaje del Sistema',",
+                    "\t\tmsg: 'Por favor seleccione el formulario que desea eliminar.',",
+                    "\t\ticon: Ext.MessageBox.ERROR,",
+                    "\t\tbuttons: Ext.Msg.OK",
+                    "\t});",
+                    "}"
+                ],
+                "name": "click"
+            },
+            "name": "onBtnEliminarSistemaMedidaClick",
+            "designerId": "eaea20e8-57c9-428d-8aa7-4dbc68f42946"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnGuardarSistemaMedida",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnGuardarSistemaMedidaClick",
+                "implHandler": [
+                    "var win = button.up('window'),",
+                    "\tform = win.down('form'),",
+                    "\trecord = form.getRecord(),",
+                    "\tvalues = form.getValues();",
+                    "",
+                    "// Unicamente modificar el nombre del store en este evento //",
+                    "var store = this.getStoreSistemaMedidaStore();",
+                    "",
+                    "store.getProxy().setExtraParam(\"fn\", \"sp_put_sistema_um\");",
+                    "//store.getProxy().setExtraParam(\"idmod\",signeApp.app.idmodapp);",
+                    "var lparametros = Ext.util.JSON.encode({\"empresa\":1});",
+                    "store.getProxy().setExtraParam(\"listparams\", lparametros);",
+                    "",
+                    "//",
+                    "",
+                    "if (form.getForm().isValid()){",
+                    "\tif (record){",
+                    "\t\trecord.set(values);",
+                    "\t}",
+                    "\telse{",
+                    "\t\tstore.add(values);",
+                    "\t}",
+                    "\twin.close();",
+                    "}",
+                    ""
+                ],
+                "name": "click"
+            },
+            "name": "onBtnGuardarSistemaMedidaClick",
+            "designerId": "3d20f4ed-f020-461e-a369-ba0959c7edc7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#listaSistemaMedida",
+                "designer|params": [
+                    "dataview",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "onListaSistemaMedidaItemDblClick",
+                "implHandler": [
+                    "this.editarSistemaMedida();"
+                ],
+                "name": "itemdblclick"
+            },
+            "name": "onListaSistemaMedidaItemDblClick",
+            "designerId": "686b84b2-8c5d-458d-9579-e10d9e0be255"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "cargarSistemaMedida",
+                "implHandler": [
+                    "var store = this.getStoreSistemaMedidaStore();",
+                    "",
+                    "\tstore.getProxy().setExtraParam(\"fn\", \"sp_get_sistema_um\");",
+                    "\tstore.getProxy().setExtraParam(\"id\",0);",
+                    "\tvar lparametros = Ext.util.JSON.encode({\"empresa\":1});",
+                    "\tstore.getProxy().setExtraParam(\"listparams\", lparametros);",
+                    "",
+                    "\tstore.load();"
+                ]
+            },
+            "name": "cargarSistemaMedida",
+            "designerId": "8c671f86-10cb-4bcd-a67d-1854afa56af2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "editarSistemaMedida",
+                "implHandler": [
+                    "var record= this.getListaSistemaMedida().getSelectionModel().getSelection();",
+                    "if(record.length > 0){",
+                    "\tvar view = Ext.widget('editarsistemamedida');",
+                    "\tvar EditForm=view.down('form');",
+                    "\tEditForm.loadRecord(record[0]);",
+                    "}else{",
+                    "\tExt.MessageBox.show({",
+                    "\t\ttitle: 'Mensaje del Sistema',",
+                    "\t\tmsg: 'Por favor seleccione el registro que desea editar.',",
+                    "\t\ticon: Ext.MessageBox.ERROR,",
+                    "\t\tbuttons: Ext.Msg.OK",
+                    "\t});",
+                    "}"
+                ]
+            },
+            "name": "editarSistemaMedida",
+            "designerId": "9e52b06a-3863-4128-af30-04f3590a6b64"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "listaSistemaMedida",
+                "selector": "#listaSistemaMedida"
+            },
+            "name": "listaSistemaMedida",
+            "designerId": "0601d237-f3bc-470c-9669-ff5441f051ed"
+        }
+    ]
+}
