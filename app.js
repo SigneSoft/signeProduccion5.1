@@ -21,8 +21,7 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'modelSistemaMedida',
-        'MyModel'
+        'modelSistemaMedida'
     ],
     stores: [
         'storeSistemaMedida'

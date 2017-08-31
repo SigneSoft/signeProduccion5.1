@@ -84,7 +84,6 @@
                     "if(record.length > 0){",
                     "\tstore = this.getStoreSistemaMedidaStore();",
                     "",
-                    "\tstore.getProxy().setExtraParam(\"fn\", \"sp_put_sistema_um\");",
                     "\t//store.getProxy().setExtraParam(\"idmod\",signeApp.app.idmodapp);",
                     "\tvar lparametros = Ext.util.JSON.encode({\"empresa\":1});",
                     "\tstore.getProxy().setExtraParam(\"listparams\", lparametros);",
@@ -143,8 +142,6 @@
                     "// Unicamente modificar el nombre del store en este evento //",
                     "var store = this.getStoreSistemaMedidaStore();",
                     "",
-                    "store.getProxy().setExtraParam(\"fn\", \"sp_put_sistema_um\");",
-                    "//store.getProxy().setExtraParam(\"idmod\",signeApp.app.idmodapp);",
                     "var lparametros = Ext.util.JSON.encode({\"empresa\":1});",
                     "store.getProxy().setExtraParam(\"listparams\", lparametros);",
                     "",
@@ -205,12 +202,10 @@
                 "implHandler": [
                     "var store = this.getStoreSistemaMedidaStore();",
                     "",
-                    "\tstore.getProxy().setExtraParam(\"fn\", \"sp_get_sistema_um\");",
-                    "\tstore.getProxy().setExtraParam(\"id\",0);",
-                    "\tvar lparametros = Ext.util.JSON.encode({\"empresa\":1});",
-                    "\tstore.getProxy().setExtraParam(\"listparams\", lparametros);",
+                    "var lparametros = Ext.util.JSON.encode({\"empresa\":1});",
+                    "store.getProxy().setExtraParam(\"listparams\", lparametros);",
                     "",
-                    "\tstore.load();"
+                    "store.load();"
                 ]
             },
             "name": "cargarSistemaMedida",

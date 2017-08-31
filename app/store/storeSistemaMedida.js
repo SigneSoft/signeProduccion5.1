@@ -70,10 +70,10 @@ Ext.define('signeProduccion.store.storeSistemaMedida', {
             proxy: {
                 type: 'rest',
                 api: {
-                    read: 'http://localhost/raSCP/api/metodo/READ',
-                    create: 'http://localhost/raSCP/api/metodo/CREATE',
-                    update: 'http://localhost/raSCP/api/metodo/UPDATE',
-                    destroy: 'http://localhost/raSCP/api/metodo/DESTROY'
+                    read: 'http://localhost/api.signesoft/produccion/listarSistemaMedida',
+                    create: 'http://localhost/api.signesoft/produccion/actualizarSistemaMedida',
+                    update: 'http://localhost/api.signesoft/produccion/actualizarSistemaMedida',
+                    destroy: 'http://localhost/api.signesoft/produccion/actualizarSistemaMedida'
                 }/*{read: 'http://cuxniquel.a2hosted.com/rasCP/api/metodo/READ',create: 'http://cuxniquel.a2hosted.com/rasCP/api/metodo/CREATE',
                 update: 'http://cuxniquel.a2hosted.com/rasCP/api/metodo/UPDATE',
                 destroy: 'http://cuxniquel.a2hosted.com/rasCP/api/metodo/DESTROY'

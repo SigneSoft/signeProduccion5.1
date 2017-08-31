@@ -56,7 +56,6 @@ Ext.define('signeProduccion.controller.controladorSistemaMedida', {
         if(record.length > 0){
         	store = this.getStoreSistemaMedidaStore();
 
-        	store.getProxy().setExtraParam("fn", "sp_put_sistema_um");
         	//store.getProxy().setExtraParam("idmod",signeApp.app.idmodapp);
         	var lparametros = Ext.util.JSON.encode({"empresa":1});
         	store.getProxy().setExtraParam("listparams", lparametros);
@@ -95,8 +94,6 @@ Ext.define('signeProduccion.controller.controladorSistemaMedida', {
         // Unicamente modificar el nombre del store en este evento //
         var store = this.getStoreSistemaMedidaStore();
 
-        store.getProxy().setExtraParam("fn", "sp_put_sistema_um");
-        //store.getProxy().setExtraParam("idmod",signeApp.app.idmodapp);
         var lparametros = Ext.util.JSON.encode({"empresa":1});
         store.getProxy().setExtraParam("listparams", lparametros);
 
@@ -121,12 +118,10 @@ Ext.define('signeProduccion.controller.controladorSistemaMedida', {
     cargarSistemaMedida: function() {
         var store = this.getStoreSistemaMedidaStore();
 
-        	store.getProxy().setExtraParam("fn", "sp_get_sistema_um");
-        	store.getProxy().setExtraParam("id",0);
-        	var lparametros = Ext.util.JSON.encode({"empresa":1});
-        	store.getProxy().setExtraParam("listparams", lparametros);
+        var lparametros = Ext.util.JSON.encode({"empresa":1});
+        store.getProxy().setExtraParam("listparams", lparametros);
 
-        	store.load();
+        store.load();
     },
 
     editarSistemaMedida: function() {
