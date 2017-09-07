@@ -1,0 +1,84 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyStyle": [
+            "background-color:#2f7d9c !important;"
+        ],
+        "designer|userAlias": "menuview",
+        "designer|userClassName": "menuView",
+        "height": 667,
+        "id": "images-view",
+        "itemId": null,
+        "title": "Menu",
+        "width": 350
+    },
+    "name": "MyPanel1",
+    "designerId": "ac2dcac1-bc65-41c5-9e23-bbef7ec298a2",
+    "viewControllerInstanceId": "9705620f-1c36-4b04-8cfd-e042cf554e79",
+    "viewModelInstanceId": "040e0e06-863c-4db1-8c12-d722363d727f",
+    "cn": [
+        {
+            "type": "Ext.view.View",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "myview",
+                "itemSelector": "div.menu-contenedor",
+                "overItemCls": "x-item-over",
+                "store": "storeMenu"
+            },
+            "name": "MyView",
+            "designerId": "96aa0cf1-6be1-4118-9011-2867fb152eeb",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "tpl",
+                        "implHandler": [
+                            "<tpl for=\".\">",
+                            "<div class=\"menu-contenedor\">",
+                            "    ",
+                            "    <div class=\"menu-thumb\"><img src=\"./app/packages/build/resources/imagenmenu/{thumb}\" />",
+                            "    </div>",
+                            "    <div class=\"menu-contenido\">",
+                            "    <h3 class=\"menu-titulo\">{name:htmlEncode}</h3>",
+                            "        <p class= \"menu-descripcion\">{description:htmlEncode}</p>",
+                            "  </div>",
+                            "</div>",
+                            "\t",
+                            "</tpl>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "cbb5bcfe-8f6d-4f7e-9352-6eeadb343b76"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "toolCerrarMenuPrincipal"
+            },
+            "name": "MyTool1",
+            "designerId": "e728ebae-7d9d-4a91-b28d-5cc5e045d00f"
+        }
+    ]
+}

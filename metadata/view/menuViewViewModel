@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "menuview",
+        "designer|userClassName": "menuViewViewModel"
+    },
+    "name": "MyPanel1ViewModel",
+    "designerId": "040e0e06-863c-4db1-8c12-d722363d727f"
+}

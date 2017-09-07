@@ -21,20 +21,44 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'modelSistemaMedida'
+        'modelSistemaMedida',
+        'modelLogin',
+        'modelMenu'
     ],
     stores: [
-        'storeSistemaMedida'
+        'storeSistemaMedida',
+        'storeLogin'
     ],
     views: [
         'listaSistemaMedida',
-        'editarSistemaMedida'
+        'editarSistemaMedida',
+        'clsLogin',
+        'escritorio',
+        'menuView'
+    ],
+    controllers: [
+        'controladorLogin',
+        'controladorEscritorio'
     ],
     name: 'signeProduccion',
 
     launch: function() {
-        Ext.create('signeProduccion.view.listaSistemaMedida', {renderTo: Ext.getBody()});
+        Ext.create('signeProduccion.view.clsLogin', {renderTo: Ext.getBody()});
+        localStorage.removeItem('nombre-usuario');
+        localStorage.removeItem('signeProduccion-token');
+
         signeProduccion.app.getController('controladorSistemaMedida').cargarSistemaMedida();
+
+        //var token = "dfdfdfdf";
+
+    },
+
+    salirSistema: function() {
+        localStorage.removeItem('nombre-usuario');
+        localStorage.removeItem('signeProduccion-token');
+
+        var windowLogin= Ext.widget('WindowLogin');
+        windowLogin.show();
 
     }
 

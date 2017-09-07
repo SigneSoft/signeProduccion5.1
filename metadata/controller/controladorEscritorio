@@ -1,0 +1,43 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "controladorEscritorio"
+    },
+    "name": "MyController",
+    "designerId": "460b3f07-76c3-4fd2-a57d-b397ea1680da",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#toolCerrarMenuPrincipal",
+                "designer|params": [
+                    "tool",
+                    "e",
+                    "owner",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.panel.Tool",
+                "fn": "onToolCerrarMenuPrincipalClick",
+                "implHandler": [
+                    "var escritorio = Ext.getCmp(\"escritorioPrincipal\");",
+                    "escritorio.destroy();",
+                    "",
+                    "signeProduccion.app.salirSistema();"
+                ],
+                "name": "click"
+            },
+            "name": "onToolCerrarMenuPrincipalClick",
+            "designerId": "e40e6059-f496-4812-9482-d1378242f107"
+        }
+    ]
+}

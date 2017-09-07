@@ -1,0 +1,15 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css_k94bmyb5",
+        "id": "data-view",
+        "url": "./app/packages/build/resources/data-view.css"
+    },
+    "name": "css1",
+    "designerId": "f40c3587-84c6-42fd-90c0-6bfa93dc71fe"
+}

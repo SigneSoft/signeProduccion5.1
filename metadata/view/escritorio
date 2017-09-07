@@ -1,0 +1,193 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|padding": "10 10 10",
+        "designer|userAlias": "escritorioPrincipal",
+        "designer|userClassName": "escritorio",
+        "id": "escritorioPrincipal",
+        "itemId": "",
+        "layout": "border"
+    },
+    "name": "MyViewport",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "81176f4a-8d2f-490e-8e55-c8cc5d1af092",
+    "viewControllerInstanceId": "e1945b58-490d-43b5-ae27-0ecabc072e68",
+    "viewModelInstanceId": "9d9b4d4e-f95b-4e9a-ad58-20945a7bb30c",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapseDirection": "left",
+                "collapsible": true,
+                "hideCollapseTool": true,
+                "id": "contenedorMenu",
+                "layout": "card",
+                "layout|region": "west",
+                "layout|split": true,
+                "margin": "0 0 5 0",
+                "titleCollapse": true,
+                "width": 350
+            },
+            "name": "MyPanel",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "6c7a3ee5-60ae-4b23-92ec-db9f36b6b9b6",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "height": 60,
+                        "html": [
+                            "<div class=\"logo-empresa\"></div>"
+                        ],
+                        "itemId": "panelLogo",
+                        "layout": null,
+                        "width": null
+                    },
+                    "name": "MyContainer",
+                    "designerId": "f9cc60e0-70bf-4384-b0e8-9a61dce477bf"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "menuview",
+                    "designerId": "00f283de-1aa4-4d6f-9168-d42b710c1851",
+                    "masterInstanceId": "ac2dcac1-bc65-41c5-9e23-bbef7ec298a2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "contenedorMantenimiento",
+                "layout": "card",
+                "layout|flex": 100,
+                "layout|region": "center",
+                "layout|split": false,
+                "margin": "0 0 5 0"
+            },
+            "name": "MyContainer1",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "5ce4185b-36a4-480e-a36a-5629d83ba69f",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "listasistemamedida1",
+                    "designerId": "997c6754-e215-45e9-b094-1ad0659e8ea0",
+                    "masterInstanceId": "69958e9f-a394-44a3-9acd-ce59031e2336"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 30,
+                "id": "contenedorEstado",
+                "layout": "card",
+                "layout|region": "south"
+            },
+            "name": "MyContainer2",
+            "designerId": "d568683f-5d2e-4967-8d6f-7cb8993f600f",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": 1,
+                        "height": 30,
+                        "id": "statusBar"
+                    },
+                    "name": "MyToolbar1",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "396db27d-77ea-4aba-a504-a47a37b60a79",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "lblUsuario",
+                                "layout|flex": null,
+                                "text": null,
+                                "width": null
+                            },
+                            "name": "MyLabel",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "d259384b-9b20-4c71-a3bc-60a27d47442d"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "lblSucursal",
+                                "layout|flex": null,
+                                "text": null,
+                                "width": null
+                            },
+                            "name": "MyLabel1",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "3ebb0022-673e-48eb-8ee7-8f598628ed4f"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

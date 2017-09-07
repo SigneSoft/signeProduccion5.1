@@ -54,38 +54,40 @@ Ext.define('signeProduccion.controller.controladorSistemaMedida', {
         record = this.getListaSistemaMedida().getSelectionModel().getSelection();
 
         if(record.length > 0){
-        	store = this.getStoreSistemaMedidaStore();
+            store = this.getStoreSistemaMedidaStore();
 
-        	//store.getProxy().setExtraParam("idmod",signeApp.app.idmodapp);
-        	var lparametros = Ext.util.JSON.encode({"empresa":1});
-        	store.getProxy().setExtraParam("listparams", lparametros);
+            //store.getProxy().setExtraParam("idmod",signeApp.app.idmodapp);
+            var lparametros = Ext.util.JSON.encode({"empresa":1});
+            store.getProxy().setExtraParam("listparams", lparametros);
 
 
-        	Ext.MessageBox.show({
-        		title : 'Eliminar Registro',
-        		buttons : Ext.MessageBox.YESNO,
-        		msg : 'Realmente desea eliminar el sistema : '+record[0].data.descripcion+' ?',
-        		icon : Ext.Msg.WARNING,
-        		fn : function(btn)
-        		{
-        			if (btn == 'yes')
-        			{
-        				store.remove(record);
+            Ext.MessageBox.show({
+                title : 'Eliminar Registro',
+                buttons : Ext.MessageBox.YESNO,
+                msg : 'Realmente desea eliminar el sistema : '+record[0].data.descripcion+' ?',
+                icon : Ext.Msg.WARNING,
+                fn : function(btn)
+                {
+                    if (btn == 'yes')
+                    {
+                        store.remove(record);
 
-        			}
-        		}
-        	});
+                    }
+                }
+            });
         }else{
-        	Ext.MessageBox.show({
-        		title: 'Mensaje del Sistema',
-        		msg: 'Por favor seleccione el formulario que desea eliminar.',
-        		icon: Ext.MessageBox.ERROR,
-        		buttons: Ext.Msg.OK
-        	});
+            Ext.MessageBox.show({
+                title: 'Mensaje del Sistema',
+                msg: 'Por favor seleccione el formulario que desea eliminar.',
+                icon: Ext.MessageBox.ERROR,
+                buttons: Ext.Msg.OK
+            });
         }
     },
 
     onBtnGuardarSistemaMedidaClick: function(button, e, eOpts) {
+
+
         var win = button.up('window'),
         	form = win.down('form'),
         	record = form.getRecord(),
@@ -94,9 +96,14 @@ Ext.define('signeProduccion.controller.controladorSistemaMedida', {
         // Unicamente modificar el nombre del store en este evento //
         var store = this.getStoreSistemaMedidaStore();
 
+        var token = localStorage.getItem('signeProduccion-token');
+
+        store.getProxy().setHeaders({
+            Authorization:'Bearer ' + token
+        });
+
         var lparametros = Ext.util.JSON.encode({"empresa":1});
         store.getProxy().setExtraParam("listparams", lparametros);
-
         //
 
         if (form.getForm().isValid()){
@@ -109,6 +116,7 @@ Ext.define('signeProduccion.controller.controladorSistemaMedida', {
         	win.close();
         }
 
+
     },
 
     onListaSistemaMedidaItemDblClick: function(dataview, record, item, index, e, eOpts) {
@@ -117,6 +125,13 @@ Ext.define('signeProduccion.controller.controladorSistemaMedida', {
 
     cargarSistemaMedida: function() {
         var store = this.getStoreSistemaMedidaStore();
+
+        var token = localStorage.getItem('signeProduccion-token');
+
+        store.getProxy().setHeaders({
+            Authorization:'Bearer ' + token
+        });
+
 
         var lparametros = Ext.util.JSON.encode({"empresa":1});
         store.getProxy().setExtraParam("listparams", lparametros);

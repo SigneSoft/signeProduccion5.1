@@ -18,7 +18,6 @@ Ext.define('signeProduccion.view.listaSistemaMedida', {
     alias: 'widget.listasistemamedida',
 
     requires: [
-        'signeProduccion.view.undefinedViewModel',
         'Ext.view.Table',
         'Ext.grid.column.RowNumberer',
         'Ext.grid.filters.filter.String',
@@ -29,9 +28,6 @@ Ext.define('signeProduccion.view.listaSistemaMedida', {
         'Ext.grid.filters.Filters'
     ],
 
-    viewModel: {
-        type: 'listaformulario'
-    },
     height: 322,
     id: 'listaSistemaMedida',
     title: 'Lista de sistemas de medida',

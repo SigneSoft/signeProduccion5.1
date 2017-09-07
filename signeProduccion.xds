@@ -31,26 +31,40 @@
     "framework": "ext51",
     "viewOrderMap": {
         "view": [
-            "32d7bdee-c758-4291-8d5c-a015c6412813",
-            "96fd7802-3fd9-4ecf-a529-155fdc574f19",
             "69958e9f-a394-44a3-9acd-ce59031e2336",
             "d0e90f14-2e91-4111-9c01-24fae24ce775",
             "e5396a9c-d13a-4b87-8582-94724d0ab52b",
-            "a250ae87-82e7-450e-a584-06a8e12e2f13"
+            "a250ae87-82e7-450e-a584-06a8e12e2f13",
+            "dabb162c-b105-4568-a900-341a6d067989",
+            "2eabf95e-ec67-4116-89ee-c7e35e881b30",
+            "07a0d49e-fea9-4658-b673-fb748365830c",
+            "9d9b4d4e-f95b-4e9a-ad58-20945a7bb30c",
+            "e1945b58-490d-43b5-ae27-0ecabc072e68",
+            "81176f4a-8d2f-490e-8e55-c8cc5d1af092",
+            "040e0e06-863c-4db1-8c12-d722363d727f",
+            "9705620f-1c36-4b04-8cfd-e042cf554e79",
+            "ac2dcac1-bc65-41c5-9e23-bbef7ec298a2"
         ],
         "store": [
-            "f1cc2c6e-675c-4f80-a36d-179530279ae3"
+            "f1cc2c6e-675c-4f80-a36d-179530279ae3",
+            "a40c5f6b-9ba1-4416-ae93-2e601cb4a605",
+            "53b7a5b6-50de-4b63-a35f-159c740bcb42"
         ],
         "controller": [
-            "15d9f1bd-6e2b-4a8e-8d52-acb2c8b58fc7"
+            "15d9f1bd-6e2b-4a8e-8d52-acb2c8b58fc7",
+            "7865e749-ec8b-41c0-a90c-00bfb868a471",
+            "460b3f07-76c3-4fd2-a57d-b397ea1680da"
         ],
         "model": [
-            "67e74612-b0c1-4e46-9159-db1e9450df37"
+            "67e74612-b0c1-4e46-9159-db1e9450df37",
+            "f8eefa76-7373-4475-9357-b9033d8705e6",
+            "360443d1-6a3b-4846-8e21-333e7db673c3"
         ],
         "resource": [
             "5e8edda2-3cac-4ca4-aa3f-70bd0c1e4e29",
             "5f94a785-7f29-4e62-89d9-3fc7855d9623",
-            "295f767c-ec21-4bfb-a48c-5d62ed4811b6"
+            "295f767c-ec21-4bfb-a48c-5d62ed4811b6",
+            "f40c3587-84c6-42fd-90c0-6bfa93dc71fe"
         ],
         "app": [
             "application"

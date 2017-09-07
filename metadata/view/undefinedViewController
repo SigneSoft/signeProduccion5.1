@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "listaformulario",
+        "designer|userAlias": "WindowLogin",
         "designer|userClassName": "undefinedViewController"
     },
     "name": "undefinedViewController",
-    "designerId": "96fd7802-3fd9-4ecf-a529-155fdc574f19"
+    "designerId": "2eabf95e-ec67-4116-89ee-c7e35e881b30"
 }

@@ -15,5 +15,5 @@
 
 Ext.define('signeProduccion.view.undefinedViewController', {
     extend: 'Ext.app.ViewController',
-    alias: 'controller.listaformulario'
+    alias: 'controller.WindowLogin'
 });

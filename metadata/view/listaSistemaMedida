@@ -6,7 +6,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|initialView": true,
         "designer|userAlias": "listasistemamedida",
         "designer|userClassName": "listaSistemaMedida",
         "height": 322,

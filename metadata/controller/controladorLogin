@@ -1,0 +1,120 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "controladorLogin",
+        "stores": [
+            "storeLogin",
+            "storeMenu"
+        ]
+    },
+    "name": "controladorLogin1",
+    "designerId": "7865e749-ec8b-41c0-a90c-00bfb868a471",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnIngreso",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onButtonClickIngresar",
+                "implHandler": [
+                    "var win = button.up('window');",
+                    "form = win.down('form');",
+                    "",
+                    "if (form.getForm().isValid()) {",
+                    "    var user = \"'\" + form.down('#usuario').getValue() + \"'\";",
+                    "    var pwd = \"'\" + form.down('#pass').getValue() + \"'\";",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "    store = this.getStoreLoginStore();",
+                    "",
+                    "    var lparametros = Ext.util.JSON.encode({\"user\":user,\"pwd\":pwd,\"empresa\":1});",
+                    "    store.getProxy().setExtraParam(\"listparams\", lparametros);",
+                    "",
+                    "    storeMenu = this.getStoreMenuStore();",
+                    "",
+                    "    store.load(function(records, operation, success) {",
+                    "        if(this.getCount()>=1){",
+                    "",
+                    "            indice = store.getAt(0);",
+                    "",
+                    "",
+                    "            if (indice.get(\"token\")){",
+                    "",
+                    "                localStorage.setItem('nombre-usuario', indice.get('nombre') + ' ' + indice.get('apellido'));",
+                    "",
+                    "                localStorage.setItem('signeProduccion-token', indice.get(\"token\"));",
+                    "",
+                    "                win.close();",
+                    "",
+                    "                // Carga las opciones del menu principal",
+                    "                storeMenu.getProxy().setExtraParam(\"id\", 5);",
+                    "",
+                    "                var lparametros = Ext.util.JSON.encode({\"empresa\":1});",
+                    "                storeMenu.getProxy().setExtraParam(\"listparams\", lparametros);",
+                    "",
+                    "                storeMenu.load();",
+                    "                //",
+                    "",
+                    "                var escritorio= Ext.widget('escritorioPrincipal');",
+                    "                escritorio.show();",
+                    "",
+                    "                statusBar = escritorio.down('#statusBar');",
+                    "                statusBar.items.getAt(0).update('Usuario: ' + localStorage.getItem('nombre-usuario'));",
+                    "",
+                    "            }",
+                    "        }",
+                    "        else{",
+                    "",
+                    "            localStorage.removeItem('signeProduccion-token');",
+                    "",
+                    "            Ext.MessageBox.show({",
+                    "                title: 'Mensaje del Sistema',",
+                    "                msg: 'Los datos de usuario que se proporcionarón son inválidos.',",
+                    "                icon: Ext.MessageBox.ERROR,",
+                    "                buttons: Ext.Msg.OK",
+                    "            });",
+                    "        }",
+                    "    });",
+                    "",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onButtonClickIngresar",
+            "designerId": "0af62763-94bc-442b-9ed0-6a4e9933e858"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#toolSalir",
+                "designer|targetType": "Ext.panel.Tool",
+                "fn": "onToolClickSalir",
+                "implHandler": [
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onToolClickSalir",
+            "designerId": "4fabc365-c874-4351-9cd8-9149c9a39bbe"
+        }
+    ]
+}

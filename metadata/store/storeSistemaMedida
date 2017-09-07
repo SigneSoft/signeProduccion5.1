@@ -45,7 +45,7 @@
             "}"
         ],
         "model": "modelSistemaMedida",
-        "storeId": "storeMetadataFormularioInfo"
+        "storeId": "storeSistemaMedida"
     },
     "name": "MyJsonStore",
     "configAlternates": {
@@ -80,6 +80,11 @@
                     "create:'http://cuxniquel.a2hosted.com/rasCP/api/metodo/CREATE',",
                     "update: 'http://cuxniquel.a2hosted.com/rasCP/api/metodo/UPDATE',",
                     "destroy: 'http://cuxniquel.a2hosted.com/rasCP/api/metodo/DESTROY'}*/"
+                ],
+                "headers": [
+                    "{",
+                    "'Authorization' : 'Bearer {token}'",
+                    "}"
                 ],
                 "idParam": null,
                 "password": "",

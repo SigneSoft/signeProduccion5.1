@@ -63,7 +63,7 @@ Ext.define('signeProduccion.store.storeSistemaMedida', {
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({
-            storeId: 'storeMetadataFormularioInfo',
+            storeId: 'storeSistemaMedida',
             autoLoad: false,
             autoSync: true,
             model: 'signeProduccion.model.modelSistemaMedida',
@@ -79,6 +79,9 @@ Ext.define('signeProduccion.store.storeSistemaMedida', {
                 destroy: 'http://cuxniquel.a2hosted.com/rasCP/api/metodo/DESTROY'
             }*/,
             url: '',
+            headers: {
+                Authorization: 'Bearer {token}'
+            },
             password: '',
             reader: {
                 type: 'json',

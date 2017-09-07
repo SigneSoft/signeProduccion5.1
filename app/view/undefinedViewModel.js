@@ -15,6 +15,6 @@
 
 Ext.define('signeProduccion.view.undefinedViewModel', {
     extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.listaformulario'
+    alias: 'viewmodel.WindowLogin'
 
 });

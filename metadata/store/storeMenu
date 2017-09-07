@@ -1,0 +1,166 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "autoSync": true,
+        "designer|userClassName": "storeMenu",
+        "listeners": [
+            "{",
+            "write: function(store, operation, eOpts){",
+            "",
+            "if (operation.action == 'destroy') {",
+            "\tExt.MessageBox.show({",
+            "\ttitle: 'Mensaje del Sistema  ',",
+            "\tmsg:  operation._resultSet.message,",
+            "\tbuttons: Ext.MessageBox.OK,",
+            "\ticon: Ext.MessageBox.INFO",
+            "\t});    ",
+            "}",
+            "",
+            "if (operation.action == 'create') {",
+            "\tExt.MessageBox.show({",
+            "\ttitle: 'Mensaje del Sistema  ',",
+            "\tmsg:  operation._resultSet.message,",
+            "\tbuttons: Ext.MessageBox.OK,",
+            "\ticon: Ext.MessageBox.INFO",
+            "\t});    ",
+            "}",
+            "",
+            "",
+            "if (operation.action == 'update') {",
+            "\tExt.MessageBox.show({",
+            "\ttitle: 'Mensaje del Sistema  ',",
+            "\tmsg:  operation._resultSet.message,",
+            "\tbuttons: Ext.MessageBox.OK,",
+            "\ticon: Ext.MessageBox.INFO",
+            "\t});    ",
+            "}        ",
+            "\tsigneProduccion.app.getController('controladorSistemaMedida').cargarSistemaMedida();",
+            "}",
+            "}"
+        ],
+        "model": "modelMenu",
+        "storeId": "storeMenu"
+    },
+    "name": "storeSistemaMedida1",
+    "configAlternates": {
+        "listeners": "object"
+    },
+    "designerId": "a40c5f6b-9ba1-4416-ae93-2e601cb4a605",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "listeners",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "",
+                    "",
+                    "{read: 'http://localhost/api.signesoft/produccion/listarMenu'}",
+                    "",
+                    ""
+                ],
+                "headers": [
+                    "{",
+                    "'Authorization' : 'Bearer {token}'",
+                    "}"
+                ],
+                "idParam": null,
+                "password": "",
+                "url": "",
+                "username": null
+            },
+            "name": "MyRestProxy",
+            "designerId": "439f083a-d0c3-48e1-bf72-d86ed4a25dfc",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "messageProperty": "message",
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "426e6594-db3b-45b3-887c-c64ae1536fcb"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "rootProperty": "data",
+                        "writeAllFields": true,
+                        "writeRecordId": false
+                    },
+                    "name": "MyJsonWriter1",
+                    "designerId": "196469f9-18c2-4825-86a9-fde8fda8ef01"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onAjaxException",
+                        "implHandler": [
+                            "if (operation.getError()){",
+                            "\tif (operation.getError().statusText){",
+                            "\t\tExt.MessageBox.show({",
+                            "\t\t\ttitle: 'Mensaje del Sistema',",
+                            "\t\t\tmsg: operation.getError().statusText,",
+                            "\t\t\ticon: Ext.MessageBox.ERROR,",
+                            "\t\t\tbuttons: Ext.Msg.OK",
+                            "\t\t});",
+                            "\t}else{",
+                            "\t\tExt.MessageBox.show({",
+                            "\t\t\ttitle: 'Mensaje del Sistema',",
+                            "\t\t\tmsg: operation.getError(),",
+                            "\t\t\ticon: Ext.MessageBox.ERROR,",
+                            "\t\t\tbuttons: Ext.Msg.OK",
+                            "\t\t});",
+                            "\t}",
+                            "}else{",
+                            "\tvar json = Ext.decode(request.responseText);",
+                            "\tExt.MessageBox.show({",
+                            "\t\ttitle: 'Mensaje del Sistema',",
+                            "\t\tmsg: json.message,",
+                            "\t\ticon: Ext.MessageBox.ERROR,",
+                            "\t\tbuttons: Ext.Msg.OK",
+                            "\t});",
+                            "}"
+                        ],
+                        "name": "exception",
+                        "scope": "me"
+                    },
+                    "name": "onAjaxException",
+                    "designerId": "5e5bd629-b29a-45ea-9dc8-33befd527c9f"
+                }
+            ]
+        }
+    ]
+}
