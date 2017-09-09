@@ -17,7 +17,6 @@
         ],
         "name": "signeProduccion",
         "stores": [
-            "storeSistemaMedida",
             "storeLogin"
         ],
         "views": [
@@ -41,13 +40,7 @@
             "userConfig": {
                 "fn": "launch",
                 "implHandler": [
-                    "localStorage.removeItem('nombre-usuario');",
-                    "localStorage.removeItem('signeProduccion-token');",
-                    "",
-                    "signeProduccion.app.getController('controladorSistemaMedida').cargarSistemaMedida();",
-                    "",
-                    "//var token = \"dfdfdfdf\";",
-                    ""
+                    "signeProduccion.app.limpiarVariablesLocales();"
                 ]
             },
             "name": "launch",
@@ -63,8 +56,7 @@
             "userConfig": {
                 "fn": "salirSistema",
                 "implHandler": [
-                    "localStorage.removeItem('nombre-usuario');",
-                    "localStorage.removeItem('signeProduccion-token');",
+                    "signeProduccion.app.limpiarVariablesLocales();",
                     "",
                     "var windowLogin= Ext.widget('WindowLogin');",
                     "windowLogin.show();",
@@ -73,6 +65,25 @@
             },
             "name": "salirSistema",
             "designerId": "84da3d89-ddde-4872-8f1e-7b6ee98a7b1c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "limpiarVariablesLocales",
+                "implHandler": [
+                    "localStorage.removeItem('nombre-usuario');",
+                    "localStorage.removeItem('signeProduccion-token');",
+                    "localStorage.removeItem('id-modulo');",
+                    ""
+                ]
+            },
+            "name": "limpiarVariablesLocales",
+            "designerId": "8b357a4a-0e6c-4b17-af92-274fce4c6573"
         }
     ]
 }

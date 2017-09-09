@@ -98,9 +98,13 @@ Ext.define('signeProduccion.controller.controladorSistemaMedida', {
 
         var token = localStorage.getItem('signeProduccion-token');
 
+        var modulo = localStorage.getItem('id-modulo');
+
         store.getProxy().setHeaders({
             Authorization:'Bearer ' + token
         });
+
+        store.getProxy().setExtraParam("idModulo", modulo);
 
         var lparametros = Ext.util.JSON.encode({"empresa":1});
         store.getProxy().setExtraParam("listparams", lparametros);
@@ -128,10 +132,14 @@ Ext.define('signeProduccion.controller.controladorSistemaMedida', {
 
         var token = localStorage.getItem('signeProduccion-token');
 
+        var modulo = localStorage.getItem('id-modulo');
+
         store.getProxy().setHeaders({
             Authorization:'Bearer ' + token
         });
 
+
+        store.getProxy().setExtraParam("idModulo", modulo);
 
         var lparametros = Ext.util.JSON.encode({"empresa":1});
         store.getProxy().setExtraParam("listparams", lparametros);

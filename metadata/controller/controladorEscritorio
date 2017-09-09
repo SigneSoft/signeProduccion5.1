@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "controladorEscritorio"
+        "designer|userClassName": "controladorEscritorio",
+        "stores": [
+            "storeSistemaMedida"
+        ]
     },
     "name": "MyController",
     "designerId": "460b3f07-76c3-4fd2-a57d-b397ea1680da",
@@ -38,6 +41,39 @@
             },
             "name": "onToolCerrarMenuPrincipalClick",
             "designerId": "e40e6059-f496-4812-9482-d1378242f107"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#myview",
+                "designer|params": [
+                    "dataviewmodel",
+                    "record",
+                    "number",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.view.View",
+                "fn": "onMyviewSelect",
+                "implHandler": [
+                    "localStorage.removeItem('id-modulo');",
+                    "",
+                    "if (record.id == 32){",
+                    "",
+                    "    localStorage.setItem('id-modulo', record.id);",
+                    "",
+                    "    signeProduccion.app.getController('controladorSistemaMedida').cargarSistemaMedida();",
+                    "}",
+                    ""
+                ],
+                "name": "select"
+            },
+            "name": "onMyviewSelect",
+            "designerId": "8b403ed7-84dc-4ed6-bc95-508271d4302d"
         }
     ]
 }

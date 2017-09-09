@@ -16,9 +16,16 @@
 Ext.define('signeProduccion.controller.controladorEscritorio', {
     extend: 'Ext.app.Controller',
 
+    stores: [
+        'storeSistemaMedida'
+    ],
+
     control: {
         "#toolCerrarMenuPrincipal": {
             click: 'onToolCerrarMenuPrincipalClick'
+        },
+        "#myview": {
+            select: 'onMyviewSelect'
         }
     },
 
@@ -27,6 +34,18 @@ Ext.define('signeProduccion.controller.controladorEscritorio', {
         escritorio.destroy();
 
         signeProduccion.app.salirSistema();
+    },
+
+    onMyviewSelect: function(dataviewmodel, record, number, eOpts) {
+        localStorage.removeItem('id-modulo');
+
+        if (record.id == 32){
+
+            localStorage.setItem('id-modulo', record.id);
+
+            signeProduccion.app.getController('controladorSistemaMedida').cargarSistemaMedida();
+        }
+
     }
 
 });

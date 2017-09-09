@@ -26,7 +26,6 @@ Ext.application({
         'modelMenu'
     ],
     stores: [
-        'storeSistemaMedida',
         'storeLogin'
     ],
     views: [
@@ -44,21 +43,21 @@ Ext.application({
 
     launch: function() {
         Ext.create('signeProduccion.view.clsLogin', {renderTo: Ext.getBody()});
-        localStorage.removeItem('nombre-usuario');
-        localStorage.removeItem('signeProduccion-token');
-
-        signeProduccion.app.getController('controladorSistemaMedida').cargarSistemaMedida();
-
-        //var token = "dfdfdfdf";
-
+        signeProduccion.app.limpiarVariablesLocales();
     },
 
     salirSistema: function() {
-        localStorage.removeItem('nombre-usuario');
-        localStorage.removeItem('signeProduccion-token');
+        signeProduccion.app.limpiarVariablesLocales();
 
         var windowLogin= Ext.widget('WindowLogin');
         windowLogin.show();
+
+    },
+
+    limpiarVariablesLocales: function() {
+        localStorage.removeItem('nombre-usuario');
+        localStorage.removeItem('signeProduccion-token');
+        localStorage.removeItem('id-modulo');
 
     }
 

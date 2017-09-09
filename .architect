@@ -345,6 +345,9 @@
             "cn": [
                 {
                     "id": "e40e6059-f496-4812-9482-d1378242f107"
+                },
+                {
+                    "id": "8b403ed7-84dc-4ed6-bc95-508271d4302d"
                 }
             ]
         },
@@ -364,21 +367,18 @@
     },
     "tabState": {
         "openTabs": [
-            "a40c5f6b-9ba1-4416-ae93-2e601cb4a605",
+            "460b3f07-76c3-4fd2-a57d-b397ea1680da",
             "7865e749-ec8b-41c0-a90c-00bfb868a471",
-            "ac2dcac1-bc65-41c5-9e23-bbef7ec298a2",
-            "f40c3587-84c6-42fd-90c0-6bfa93dc71fe",
-            "15d9f1bd-6e2b-4a8e-8d52-acb2c8b58fc7",
             "application",
-            "460b3f07-76c3-4fd2-a57d-b397ea1680da"
+            "15d9f1bd-6e2b-4a8e-8d52-acb2c8b58fc7"
         ]
     },
     "canvasState": {
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "7865e749-ec8b-41c0-a90c-00bfb868a471",
-        "selectedInstance": "4fabc365-c874-4351-9cd8-9149c9a39bbe"
+        "topInstance": "15d9f1bd-6e2b-4a8e-8d52-acb2c8b58fc7",
+        "selectedInstance": "8c671f86-10cb-4bcd-a67d-1854afa56af2"
     },
     "editMode": "code",
     "userSettings": {
